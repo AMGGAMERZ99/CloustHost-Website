@@ -1,145 +1,62 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Inter, Poppins, sans-serif;
-}
-
 body{
+margin:0;
+font-family:Arial;
 background:#0a0a0a;
-color:#ffffff;
-overflow-x:hidden;
+color:white;
 }
 
-/* HEADER */
 header{
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-background:rgba(0,0,0,0.6);
-backdrop-filter: blur(12px);
-position:sticky;
-top:0;
-z-index:100;
-border-bottom:1px solid rgba(255,255,255,0.08);
+padding:20px 8%;
+background:#000;
+border-bottom:1px solid #222;
 }
 
 .logo{
-font-size:24px;
-font-weight:800;
-color:#ffffff;
-letter-spacing:1px;
+font-weight:bold;
+font-size:22px;
 }
 
 nav a{
-color:#bdbdbd;
+color:#bbb;
+margin-left:15px;
 text-decoration:none;
-margin-left:18px;
-transition:0.3s;
 }
 
 nav a:hover{
-color:#ffffff;
+color:white;
 }
 
-/* HERO */
 .hero{
-min-height:85vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-padding:40px 20px;
+padding:120px 20px;
 }
 
 .hero h1{
-font-size:56px;
-color:#ffffff;
-letter-spacing:1px;
+font-size:50px;
 }
 
 .hero p{
-max-width:750px;
-margin-top:15px;
-color:#b0b0b0;
-font-size:18px;
-line-height:1.6;
+color:#aaa;
+max-width:600px;
+margin:auto;
 }
 
-/* BUTTON */
 .btn{
 display:inline-block;
-margin:12px;
-padding:13px 26px;
-background:#ffffff;
-color:#000000;
-font-weight:700;
-border-radius:10px;
+margin:10px;
+padding:12px 24px;
+background:white;
+color:black;
 text-decoration:none;
-transition:0.25s;
-border:1px solid transparent;
+font-weight:bold;
+border-radius:8px;
 }
 
-.btn:hover{
-background:transparent;
-color:#ffffff;
-border:1px solid #ffffff;
-transform:translateY(-2px);
-}
-
-/* SECTIONS */
-section{
-padding:70px 8%;
-}
-
-h2{
-text-align:center;
-font-size:34px;
-margin-bottom:40px;
-color:#ffffff;
-}
-
-/* GRID */
-.plans{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:22px;
-}
-
-/* CARD */
-.plan{
-background:rgba(255,255,255,0.03);
-padding:22px;
-border-radius:14px;
-border:1px solid rgba(255,255,255,0.08);
-text-align:center;
-transition:0.3s;
-}
-
-.plan:hover{
-transform:translateY(-8px);
-border:1px solid rgba(255,255,255,0.25);
-background:rgba(255,255,255,0.05);
-}
-
-.plan h3{
-color:#ffffff;
-margin-bottom:10px;
-}
-
-.plan p{
-color:#bdbdbd;
-margin:6px 0;
-}
-
-/* FOOTER */
 footer{
 text-align:center;
-padding:25px;
+padding:20px;
+border-top:1px solid #222;
 color:#777;
-background:#000000;
-margin-top:50px;
-border-top:1px solid rgba(255,255,255,0.08);
 }
