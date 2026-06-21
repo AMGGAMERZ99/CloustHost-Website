@@ -1,80 +1,132 @@
-cat > style.css << 'EOF'
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
+font-family: 'Poppins', sans-serif;
 }
 
 body{
-background:#070B14;
+background: radial-gradient(circle at top, #0a1a14, #070B14);
 color:white;
 }
 
+/* HEADER */
 header{
 display:flex;
 justify-content:space-between;
-padding:25px 8%;
+align-items:center;
+padding:20px 8%;
 background:#0c1322;
 position:sticky;
 top:0;
+z-index:100;
+border-bottom:1px solid #00ff88;
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
+font-size:26px;
+font-weight:800;
 color:#00ff88;
-text-shadow:0 0 10px #00ff88;
+text-shadow:0 0 15px #00ff88;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:18px;
+transition:0.3s;
+opacity:0.8;
 }
 
+nav a:hover{
+color:#00ff88;
+opacity:1;
+}
+
+/* HERO */
+.hero{
+padding:120px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+color:#00ff88;
+text-shadow:0 0 20px #00ff88;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:650px;
+margin:auto;
+color:#aaa;
+font-size:18px;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#00ff88;
+color:black;
+font-weight:700;
+text-decoration:none;
+border-radius:10px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px #00ff88;
+}
+
+/* SECTIONS */
 section{
 padding:60px 8%;
 }
 
 h2{
 text-align:center;
+font-size:35px;
 margin-bottom:40px;
+color:#00ff88;
 }
 
+/* PLANS GRID */
 .plans{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:20px;
 }
 
+/* PLAN CARD */
 .plan{
-background:#111827;
-padding:20px;
+background:rgba(17,24,39,0.9);
+padding:22px;
 border-radius:15px;
+text-align:center;
 transition:0.3s;
+border:1px solid transparent;
 }
 
 .plan:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
+border:1px solid #00ff88;
+box-shadow:0 0 20px #00ff88;
 }
 
-.btn{
-display:inline-block;
-margin-top:15px;
-padding:12px 20px;
-background:#00ff88;
-color:black;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
+.plan h3{
+color:#00ff88;
+margin-bottom:10px;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
-padding:20px;
+padding:25px;
 background:#0c1322;
-color:#888;
+color:#777;
 margin-top:40px;
+border-top:1px solid #00ff88;
 }
-EOF
