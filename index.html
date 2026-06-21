@@ -9,6 +9,8 @@
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <header>
 <div class="logo">CloustHost</div>
 <nav>
@@ -19,10 +21,21 @@
 </header>
 
 <section class="hero">
-<h1>Minecraft Hosting</h1>
-<p>Choose your perfect plan</p>
+<h1>High Performance Minecraft Hosting</h1>
+<p>Lag-free servers with instant setup</p>
+
+<a class="btn primary" href="#plans">View Plans</a>
+<a class="btn secondary" href="https://discord.gg/d9tCszvUJg" target="_blank">Join Discord</a>
 </section>
 
+<!-- PREMIUM FEATURES (RESTORED) -->
+<section class="features">
+<div class="feature-box">⚡ 99.9% Uptime Guarantee</div>
+<div class="feature-box">🛡 DDoS Protection</div>
+<div class="feature-box">🚀 Instant Server Setup</div>
+</section>
+
+<!-- PLANS -->
 <section id="plans" class="features">
 
 <div class="feature-box">
@@ -54,6 +67,52 @@
 </div>
 
 </section>
+
+<footer>
+© 2026 CloustHost • Minecraft Hosting
+</footer>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for (let i = 0; i < 80; i++) {
+particles.push({
+x: Math.random() * canvas.width,
+y: Math.random() * canvas.height,
+r: Math.random() * 2,
+dx: (Math.random() - 0.5) * 0.5,
+dy: (Math.random() - 0.5) * 0.5
+});
+}
+
+function animate() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+ctx.fillStyle = "rgba(255,255,255,0.6)";
+
+particles.forEach(p => {
+ctx.beginPath();
+ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+ctx.fill();
+
+p.x += p.dx;
+p.y += p.dy;
+
+if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+});
+
+requestAnimationFrame(animate);
+}
+
+animate();
+</script>
 
 </body>
 </html>
