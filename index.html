@@ -13,7 +13,6 @@
 
 <header>
 <div class="logo">CloustHost</div>
-
 <nav>
 <a href="#">Home</a>
 <a href="#plans">Plans</a>
@@ -29,32 +28,66 @@
 <a class="btn secondary" href="https://discord.gg/d9tCszvUJg" target="_blank">Join Discord</a>
 </section>
 
+<!-- FEATURES -->
 <section class="features">
 <div class="feature-box">⚡ Instant Setup</div>
 <div class="feature-box">🛡 DDoS Protection</div>
 <div class="feature-box">🚀 Low Latency</div>
 </section>
 
-<!-- PLANS SECTION -->
+<!-- PLANS -->
 <section id="plans" class="features">
+
+<!-- BUDGET PLANS -->
 <div class="feature-box">
-<h3>Basic Plan</h3>
-<p>2GB RAM</p>
+<h2>💰 Budget Plans</h2>
+<br>
+<b>DIRT</b><br>2GB RAM • 100% CPU • 10GB SSD • ₹40/month
+<br><br>
+<b>STONE</b><br>4GB RAM • 200% CPU • 20GB SSD • ₹80/month
+<br><br>
+<b>COAL</b><br>8GB RAM • 300% CPU • 40GB SSD • ₹160/month
+<br><br>
+<b>IRON</b><br>12GB RAM • 400% CPU • 60GB SSD • ₹240/month
+<br><br>
+<b>REDSTONE</b><br>16GB RAM • 500% CPU • 80GB SSD • ₹320/month
+<br><br>
+<b>LAPIS</b><br>24GB RAM • 600% CPU • 120GB SSD • ₹480/month
+<br><br>
+<b>GOLD</b><br>32GB RAM • 700% CPU • 160GB SSD • ₹640/month
+<br><br>
+<b>DIAMOND</b><br>48GB RAM • ∞ CPU • 240GB SSD • ₹960/month
+<br><br>
+<b>NETHERITE</b><br>64GB RAM • ∞ CPU • 320GB SSD • ₹1280/month
 </div>
 
+<!-- PERFORMANCE PLANS -->
 <div class="feature-box">
-<h3>Pro Plan</h3>
-<p>4GB RAM</p>
+<h2>⚡ Performance Plans</h2>
+<br>
+<b>DIRT</b><br>2GB RAM • 100% CPU • 10GB SSD • ₹80/month
+<br><br>
+<b>STONE</b><br>4GB RAM • 200% CPU • 20GB SSD • ₹160/month
+<br><br>
+<b>COAL</b><br>8GB RAM • 300% CPU • 40GB SSD • ₹320/month
+<br><br>
+<b>IRON</b><br>12GB RAM • 400% CPU • 60GB SSD • ₹480/month
+<br><br>
+<b>REDSTONE</b><br>16GB RAM • 500% CPU • 80GB SSD • ₹640/month
+<br><br>
+<b>LAPIS</b><br>24GB RAM • 600% CPU • 120GB SSD • ₹960/month
+<br><br>
+<b>GOLD</b><br>32GB RAM • 700% CPU • 160GB SSD • ₹1280/month
+<br><br>
+<b>DIAMOND</b><br>48GB RAM • ∞ CPU • 240GB SSD • ₹1920/month
+<br><br>
+<b>NETHERITE</b><br>64GB RAM • ∞ CPU • 320GB SSD • ₹2560/month
 </div>
 
-<div class="feature-box">
-<h3>Ultra Plan</h3>
-<p>8GB RAM</p>
-</div>
 </section>
 
 <footer>
-© 2026 CloustHost
+© 2026 CloustHost • Minecraft Hosting
 </footer>
 
 <script>
@@ -76,7 +109,7 @@ dy: (Math.random() - 0.5) * 0.5
 });
 }
 
-function draw() {
+function animate() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 ctx.fillStyle = "rgba(255,255,255,0.6)";
@@ -93,10 +126,10 @@ if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
 if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
 });
 
-requestAnimationFrame(draw);
+requestAnimationFrame(animate);
 }
 
-draw();
+animate();
 </script>
 
 </body>
