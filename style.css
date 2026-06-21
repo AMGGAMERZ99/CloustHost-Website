@@ -1,0 +1,66 @@
+cat > style.css << 'EOF'
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#070b14;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background:#0c1322;
+}
+
+.logo{
+color:#39ff88;
+font-size:24px;
+font-weight:700;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+nav a:hover{
+color:#39ff88;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1 span{
+color:#39ff88;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:#39ff88;
+color:black;
+text-decoration:none;
+border-radius:8px;
+}
+
+section{
+padding:60px 8%;
+}
+
+.plan{
+background:#111827;
+padding:20px;
+margin-top:15px;
+border-radius:10px;
+}
+EOF
