@@ -11,7 +11,52 @@ color:#e5e7eb;
 overflow-x:hidden;
 }
 
-/* TOP BAR */
+/* GLOW BACKGROUND */
+.glow{
+position:fixed;
+inset:-50%;
+background:radial-gradient(circle at 30% 30%, rgba(34,197,94,0.15), transparent 40%),
+radial-gradient(circle at 70% 70%, rgba(59,130,246,0.12), transparent 40%);
+animation:moveGlow 10s ease-in-out infinite alternate;
+z-index:-2;
+}
+
+@keyframes moveGlow{
+0%{transform:translate(0,0) scale(1);}
+100%{transform:translate(5%,5%) scale(1.1);}
+}
+
+/* PARTICLES */
+.particles{
+position:fixed;
+inset:0;
+z-index:-1;
+overflow:hidden;
+}
+
+.particles::before,
+.particles::after{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background-image:radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+opacity:0.05;
+animation:floatParticles 60s linear infinite;
+}
+
+.particles::after{
+opacity:0.03;
+animation-duration:120s;
+}
+
+@keyframes floatParticles{
+from{transform:translateY(0);}
+to{transform:translateY(-50%);}
+}
+
+/* HEADER */
 header{
 display:flex;
 justify-content:space-between;
@@ -24,36 +69,25 @@ position:sticky;
 top:0;
 }
 
-.logo{
-font-size:20px;
-font-weight:800;
-color:white;
-letter-spacing:1px;
-}
+.logo{font-size:20px;font-weight:800;color:white;}
 
 nav a{
 color:#cbd5e1;
-text-decoration:none;
 margin-left:18px;
-font-size:14px;
-transition:0.2s;
+text-decoration:none;
 }
 
-nav a:hover{
-color:#fff;
-}
+nav a:hover{color:white;}
 
 /* HERO */
 .hero{
 text-align:center;
 padding:100px 8%;
-background:radial-gradient(circle at top,#1f2937,transparent 60%);
 }
 
 .hero h1{
 font-size:52px;
 font-weight:900;
-color:white;
 }
 
 .hero p{
@@ -62,7 +96,6 @@ margin-top:12px;
 margin-bottom:25px;
 }
 
-/* BUTTONS */
 .btn{
 display:inline-block;
 padding:12px 20px;
@@ -70,7 +103,6 @@ margin:6px;
 border-radius:12px;
 text-decoration:none;
 font-weight:600;
-transition:0.2s;
 }
 
 .btn.primary{
@@ -78,20 +110,10 @@ background:#22c55e;
 color:#0b0f19;
 }
 
-.btn.primary:hover{
-background:#16a34a;
-transform:translateY(-2px);
-}
-
 .btn.secondary{
 background:rgba(255,255,255,0.06);
 color:white;
 border:1px solid rgba(255,255,255,0.12);
-}
-
-.btn.secondary:hover{
-background:rgba(255,255,255,0.12);
-transform:translateY(-2px);
 }
 
 /* FEATURES */
@@ -107,16 +129,8 @@ background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 padding:22px;
 border-radius:14px;
-backdrop-filter:blur(10px);
-transition:0.2s;
 }
 
-.feature-box:hover{
-transform:translateY(-5px);
-border-color:rgba(34,197,94,0.4);
-}
-
-/* FOOTER */
 footer{
 text-align:center;
 padding:25px;
