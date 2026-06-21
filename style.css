@@ -33,19 +33,15 @@ color:white;
 .hero{
 padding:120px 20px;
 text-align:center;
-max-width:900px;
-margin:auto;
 }
 
 .hero h1{
 font-size:52px;
-margin-bottom:10px;
 }
 
 .hero p{
 color:#aaa;
-font-size:18px;
-line-height:1.6;
+margin-top:10px;
 }
 
 .btn{
@@ -59,39 +55,29 @@ font-weight:700;
 border-radius:8px;
 }
 
-section{
-padding:80px 10%;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-}
-
-.plans{
+.features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
+padding:60px 10%;
+text-align:center;
 }
 
-.plan{
-background:#111;
-padding:20px;
-border:1px solid #222;
-border-radius:12px;
+.feature-box{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.1);
+padding:25px;
+border-radius:14px;
+transition:0.3s;
 }
 
-.plan:hover{
+.feature-box:hover{
+transform:translateY(-5px);
 border-color:white;
 }
 
-.plan p{
+.feature-box p{
 color:#aaa;
 }
 
-footer{
-text-align:center;
-padding:25px;
-border-top:1px solid #222;
-color:#777;
-}
+</style>
