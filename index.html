@@ -1,58 +1,83 @@
-<div class="glow"></div>
-<div class="particles"></div>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CloustHost</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<video autoplay muted loop playsinline class="video-bg">
-  <source src="background.mp4" type="video/mp4">
-</video>
-<div class="overlay"></div>
+<canvas id="particles"></canvas>
 
 <header>
 <div class="logo">CloustHost</div>
 <nav>
-<a href="index.html">Home</a>
-<a href="budget.html">Budget</a>
-<a href="performance.html">Performance</a>
-<a href="refund.html">Refund</a>
+<a href="#">Home</a>
+<a href="#">Plans</a>
+<a href="#">Discord</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>Premium Minecraft Hosting</h1>
-<p>High performance servers powered by modern infrastructure.</p>
-
-<a class="btn" href="https://discord.gg/d9tCszvUJg">Buy Server</a>
-<a class="btn" href="https://discord.gg/DyHTewPsez">Join Discord</a>
+<h1>High Performance Minecraft Hosting</h1>
+<p>Lag-free servers with instant setup</p>
+<a class="btn primary" href="#">Get Started</a>
+<a class="btn secondary" href="#">View Plans</a>
 </section>
 
 <section class="features">
-
-<div class="feature-box">
-<h3>99.9% Uptime</h3>
-<p>Stable and reliable servers.</p>
-</div>
-
-<div class="feature-box">
-<h3>DDoS Protection</h3>
-<p>Protected against attacks.</p>
-</div>
-
-<div class="feature-box">
-<h3>Instant Setup</h3>
-<p>Server ready in seconds.</p>
-</div>
-
+<div class="feature-box">⚡ Instant Setup</div>
+<div class="feature-box">🛡 DDoS Protection</div>
+<div class="feature-box">🚀 Low Latency</div>
 </section>
 
 <footer>
-Powered by CloustHost
+© 2026 CloustHost
 </footer>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for (let i = 0; i < 80; i++) {
+particles.push({
+x: Math.random() * canvas.width,
+y: Math.random() * canvas.height,
+r: Math.random() * 2,
+dx: (Math.random() - 0.5) * 0.5,
+dy: (Math.random() - 0.5) * 0.5
+});
+}
+
+function draw() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+ctx.fillStyle = "rgba(255,255,255,0.6)";
+
+particles.forEach(p => {
+ctx.beginPath();
+ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+ctx.fill();
+
+p.x += p.dx;
+p.y += p.dy;
+
+if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+});
+
+requestAnimationFrame(draw);
+}
+
+draw();
+</script>
 
 </body>
 </html>
