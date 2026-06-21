@@ -1,106 +1,80 @@
 cat > style.css << 'EOF'
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
 }
 
 body{
-  background:#050b08;
-  color:white;
+background:#070B14;
+color:white;
 }
 
-/* HEADER */
 header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 8%;
-  background:#07140e;
-  border-bottom:1px solid #0f3d24;
+display:flex;
+justify-content:space-between;
+padding:25px 8%;
+background:#0c1322;
+position:sticky;
+top:0;
 }
 
 .logo{
-  color:#00ff88;
-  font-size:24px;
-  font-weight:bold;
+font-size:28px;
+font-weight:700;
+color:#00ff88;
+text-shadow:0 0 10px #00ff88;
 }
 
 nav a{
-  color:white;
-  margin-left:15px;
-  text-decoration:none;
+color:white;
+text-decoration:none;
+margin-left:20px;
 }
 
-nav a:hover{
-  color:#00ff88;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding:100px 20px;
-}
-
-.hero h1{
-  font-size:45px;
-}
-
-.hero span{
-  color:#00ff88;
-}
-
-.hero p{
-  color:#aaa;
-  margin-top:10px;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 22px;
-  background:#00ff88;
-  color:black;
-  font-weight:bold;
-  border-radius:8px;
-  text-decoration:none;
-  transition:0.2s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
-
-/* PLANS GRID */
 section{
-  padding:60px 8%;
+padding:60px 8%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
 }
 
 .plans{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .plan{
-  background:#0b1f16;
-  padding:20px;
-  border-radius:12px;
-  border:1px solid #0f3d24;
-  transition:0.3s;
+background:#111827;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
 }
 
 .plan:hover{
-  transform:translateY(-5px);
-  border-color:#00ff88;
+transform:translateY(-5px);
 }
 
-/* FOOTER */
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:#00ff88;
+color:black;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
 footer{
-  text-align:center;
-  padding:20px;
-  color:#777;
+text-align:center;
+padding:20px;
+background:#0c1322;
+color:#888;
+margin-top:40px;
 }
 EOF
