@@ -365,3 +365,17 @@ font-weight:700;
 .powered-top a:hover{
 text-shadow:0 0 12px rgba(34,197,94,.6);
 }
+
+@media (max-width:768px){
+canvas{
+opacity:0.35;
+}
+}
+
+.plan{
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.plan:hover{
+box-shadow:0 0 25px rgba(34,197,94,.25);
+}
