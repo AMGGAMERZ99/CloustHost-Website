@@ -1,0 +1,129 @@
+<div class="mouse-glow" id="mouseGlow"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CloustHost</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<header>
+<div class="logo">CloustHost</div>
+<nav>
+<a href="#">Home</a>
+<a href="#plans">Plans</a>
+<a href="https://discord.gg/d9tCszvUJg" target="_blank">Discord</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>High Performance Minecraft Hosting</h1>
+<p>Lag-free servers with instant setup</p>
+
+<a class="btn primary" href="#plans">View Plans</a>
+<a class="btn secondary" href="https://discord.gg/d9tCszvUJg" target="_blank">Join Discord</a>
+</section>
+
+<!-- PREMIUM FEATURES (RESTORED) -->
+<section class="features">
+<div class="feature-box">⚡ 99.9% Uptime Guarantee</div>
+<div class="feature-box">🛡 DDoS Protection</div>
+<div class="feature-box">🚀 Instant Server Setup</div>
+</section>
+
+<!-- PLANS -->
+<section id="plans" class="features">
+
+<div class="feature-box">
+<h2>💰 Budget Plans</h2>
+
+<a class="plan" href="buy.html">DIRT - 2GB RAM - ₹40</a>
+<a class="plan" href="buy.html">STONE - 4GB RAM - ₹120</a>
+<a class="plan" href="buy.html">COAL - 8GB RAM - ₹160</a>
+<a class="plan" href="buy.html">IRON - 12GB RAM - ₹240</a>
+<a class="plan" href="buy.html">REDSTONE - 16GB RAM - ₹320</a>
+<a class="plan" href="buy.html">LAPIS - 24GB RAM - ₹4120</a>
+<a class="plan" href="buy.html">GOLD - 32GB RAM - ₹640</a>
+<a class="plan" href="buy.html">DIAMOND - 48GB RAM - ₹960</a>
+<a class="plan" href="buy.html">NETHERITE - 64GB RAM - ₹12120</a>
+</div>
+
+<div class="feature-box">
+<h2>⚡ Performance Plans</h2>
+
+<a class="plan" href="buy.html">DIRT - 2GB RAM - ₹120</a>
+<a class="plan" href="buy.html">STONE - 4GB RAM - ₹160</a>
+<a class="plan" href="buy.html">COAL - 8GB RAM - ₹320</a>
+<a class="plan" href="buy.html">IRON - 12GB RAM - ₹4120</a>
+<a class="plan" href="buy.html">REDSTONE - 16GB RAM - ₹640</a>
+<a class="plan" href="buy.html">LAPIS - 24GB RAM - ₹960</a>
+<a class="plan" href="buy.html">GOLD - 32GB RAM - ₹12120</a>
+<a class="plan" href="buy.html">DIAMOND - 48GB RAM - ₹1920</a>
+<a class="plan" href="buy.html">NETHERITE - 64GB RAM - ₹2560</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 CloustHost • Minecraft Hosting
+</footer>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for (let i = 0; i < 120; i++) {
+particles.push({
+x: Math.random() * canvas.width,
+y: Math.random() * canvas.height,
+r: Math.random() * 3.8,
+dx: (Math.random() - 0.8) * 0.8,
+dy: (Math.random() - 0.8) * 0.8
+});
+}
+
+function animate() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+ctx.fillStyle = "rgba(255,255,255,0.9)";
+
+particles.forEach(p => {
+ctx.beginPath();
+ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+ctx.fill();
+
+p.x += p.dx;
+p.y += p.dy;
+
+if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+});
+
+requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>
+
+<script>
+const glow = document.getElementById("mouseGlow");
+
+document.addEventListener("mousemove", (e) => {
+glow.style.left = e.clientX + "px";
+glow.style.top = e.clientY + "px";
+});
+</script>
+
