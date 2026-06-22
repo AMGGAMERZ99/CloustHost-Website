@@ -396,3 +396,69 @@ font-size:18px;
 padding:0 15px;
 }
 }
+
+.feature-box{
+animation:floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+}
+
+.hero,
+.features,
+footer{
+animation:fadeUp .8s ease forwards;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.logo{
+animation:logoGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow{
+from{
+text-shadow:0 0 5px rgba(34,197,94,.3);
+}
+to{
+text-shadow:0 0 20px rgba(34,197,94,.8);
+}
+}
+
+.btn.primary{
+position:relative;
+overflow:hidden;
+}
+
+.btn.primary::after{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:50%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.25),
+transparent
+);
+animation:shimmer 3s infinite;
+}
+
+@keyframes shimmer{
+100%{
+left:200%;
+}
+}
