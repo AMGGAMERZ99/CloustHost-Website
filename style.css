@@ -462,3 +462,24 @@ animation:shimmer 3s infinite;
 left:200%;
 }
 }
+
+.hero .btn{
+min-width:180px;
+padding:14px 24px;
+font-size:17px;
+font-weight:700;
+margin:8px;
+}
+
+.btn.secondary{
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+}
+
+.btn.secondary:hover{
+transform:translateY(-3px);
+background:rgba(255,255,255,0.15);
+box-shadow:0 0 20px rgba(255,255,255,0.15);
+}
+
